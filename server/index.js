@@ -8,12 +8,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Route includes
-const apiRouter = require("./routes/api.router");
+const mainRouter = require("./routes/main.router");
 
 console.log("Successfully Loaded.");
 
 /* Routes */
-app.use("/api/", apiRouter);
+app.use("/", mainRouter);
 
 // App Set //
 const PORT = process.env.PORT || 5001;
